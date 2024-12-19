@@ -14,7 +14,7 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class PutContactsRATests extends TastBase{
 
-    String id;
+   private String id;
 
     @BeforeMethod
     public void precondition() {
@@ -44,6 +44,7 @@ public class PutContactsRATests extends TastBase{
     @Test
     public void updateContactSuccessTest() {
         ContactDto updatedContactDto = ContactDto.builder()
+                .id(id)
                 .name("Yarik")
                 .lastName("Suxarik")
                 .email("yarik@gmail.com")
